@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: #0E0E0E;
+    font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+header .header-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+header .fade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, transparent, #0E0E0E);
+    z-index: -1;
+}
+
+header .header-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 150px;
+    opacity: .6;
+}
+
+header .header-description {
+    font-size: 20px;
+    opacity: .6;
+}
+
+main .up-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 100px 60px 0;
+}
+
+main .localizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .localizacao-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+main iframe {
+    width: 650px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.horarios .horario-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.horarios .horario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 515px;
+    height: 50px;
+    background-image: linear-gradient(45deg, rgb(118, 118, 118), rgb(193, 193, 193));
+    color: rgba(0, 0, 0, 0.800);
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.horarios .horario:hover {
+    scale: 105%;
+    background-image: linear-gradient(45deg, rgb(153, 142, 20), rgb(232, 245, 52));
+}
+
+main .down-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 60px 200px;
+}
+
+.galeria {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.galeria .galeria-half {
+    width: 250px;
+    height: 200px;
+}
+
+.galeria .galeria-full {
+    width: 250px;
+    height: 300px;
+}
+
+#galeria-1 {
+    background-image: url(../Assets/galeria1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+#galeria-2 {
+    background-image: url(../Assets/galeria2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+#galeria-3 {
+    background-image: url(../Assets/galeria3.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+#galeria-4 {
+    background-image: url(../Assets/galeria4.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+#galeria-5 {
+    background-image: url(../Assets/galeria5.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.galeria .galeria-full:hover {
+    scale: 105%;
+}
+
+.galeria .galeria-half:hover {
+    scale: 105%;
+}
+
+.cronograma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, transparent 50%, #0e0e0e), linear-gradient(to bottom, transparent 50%, #0e0e0e), url(../Assets/bg-cronograma.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cronograma .cronograma-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 60px 40px;
+
+}
+
+.cronograma .cronograma-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.cronograma .cronograma-description {
+    font-size: 14px;
+    opacity: .7;
+    margin-bottom: 40px;
+}
+
+.cronograma .cronograma-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 245px;
+    height: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rgb(118, 118, 118), rgb(193, 193, 193));
+    color: #0E0E0E;
+    transition: all .5s;
+}
+
+.cronograma .cronograma-content:hover {
+    width: 255px;
+    background-image: linear-gradient(45deg, rgb(153, 142, 20), rgb(232, 245, 52));
+}
+
+.cronograma .cronograma-day {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.cronograma .cronograma-plan {
+    font-size: 20px;
+}
+
+.instrutores {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.instrutores .instrutores-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    opacity: .8;
+    margin: 100px 60px 0;
+}
+
+.instrutores .instrutores-description {
+    font-size: 14px;
+    opacity: .7;
+    margin: 0px 60px 40px;
+
+}
+
+.instrutores .instrutores-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.instrutores .instrutor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 400px;
+    background-color: #0E0E0E;
+    cursor: pointer;  
+    transition: all .5s;
+}
+
+.instrutores .instrutor:hover {
+    width: 25%;
+    opacity: .7;
+}
+
+.instrutores .instrutor-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    opacity: .9;
+    text-align: center;
+}
+
+.instrutores .marina-souza {
+    background-image: url(../Assets/marina-souza.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;    
+}
+.instrutores .rodrigo-silva {
+    background-image: url(../Assets/rodrigo-silva.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+}
+.instrutores .gabriele-oliveira {
+    background-image: url(../Assets/gabriele-oliveira.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.instrutores .lucas-ferreira {
+    background-image: url(../Assets/lucas-ferreira.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.instrutores .bianca-costa {
+    background-image: url(../Assets/bianca-costa.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.avaliacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 200px 60px 0;
+}
+
+.avaliacoes .avaliacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    width: 300px;
+}
+
+.avaliacoes .avaliacao-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.avaliacoes .rate {
+    font-size: 14px;
+    opacity: .8;
+}
+
+.avaliacoes .avaliacao-content {
+    font-size: 14px;
+    opacity: .8;
+}
+
+.avaliacoes .avaliacao-down {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.planos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 200px 60px 0;
+}
+
+.planos .planos-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.planos .planos-description {
+    font-size: 14px;
+    text-align: center;
+    opacity: .8;
+    margin-bottom: 40px;
+}
+
+.planos .planos-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+}
+
+.planos .plano-diario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 250px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.planos .plano-mensal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 250px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.planos .plano-anual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 250px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.plano-diario, .plano-mensal, .plano-anual p {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.line {
+    width: 90%;
+    height: 2px;
+    opacity: .4;
+    background-color: black;
+}
+
+.plano-diario .plano-name {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.800);
+    background-image: linear-gradient(45deg, rgb(67, 67, 67), rgb(138, 138, 138));
+}
+
+.plano-diario .plano-price {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.800);
+    background-image: linear-gradient(45deg, rgb(67, 67, 67), rgb(138, 138, 138));
+}
+
+.plano-mensal .plano-name {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.800);
+    background-image: linear-gradient(45deg, #332303, #6B4802);
+}
+
+.plano-mensal .plano-price {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.800);
+    background-image: linear-gradient(45deg, #332303, #6B4802);
+}
+
+.plano-anual .plano-name {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.800);
+    background-image: linear-gradient(45deg, #4F1A68, #9915D7);
+}
+
+.plano-anual .plano-price {
+    width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.800);
+    background-image: linear-gradient(45deg, #4F1A68, #9915D7);
+
+}
+
+.planos .recomendado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planos .recomendacao {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: .8;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.11);
+    margin: 200px 0;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    margin: 0 60px 0;
+}
+
+footer .footer-social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-social .social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../Assets/social.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.footer-social .social:hover {
+    scale: 105%;
+}
+
+footer .footer-local {
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+footer .footer-direitos {
+    font-size: 14px;
+    opacity: .8;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        overflow: hidden;
+        background-image:linear-gradient(to bottom, transparent, #0E0E0E), url(../Assets/bg-cronograma.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    header .header-video {
+        display: none;
+    }
+
+    header .header-title {
+        font-size: 75px;
+    }
+
+    header .header-description {
+        font-size:  14px;
+    }
+
+    main .up-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 100px 10px 0;
+    }
+    
+
+    main .localizacao-title {
+        font-size: 30px;
+    }
+
+    main iframe {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .horarios .horario-title {
+        font-size: 30px;
+    }
+
+    .horarios .horario {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    main .down-container {
+        width: 90vw;
+        overflow-x: scroll;
+        margin: 100px 10px 200px;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cronograma .cronograma-container {
+        margin: 0 10px 40px;
+    }
+
+    .cronograma .cronograma-title {
+        font-size: 30px;
+    }
+
+    .cronograma .cronograma-description {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .instrutores .instrutores-title {
+        font-size: 30px;
+        margin: 100px 10px 0;
+    }
+
+    .instrutores .instrutores-description {
+        margin: 0px 10px 40px;
+    }
+
+    .instrutores .instrutores-container {
+        flex-direction: column;
+    }
+
+    .instrutores .instrutor {
+        width: 90%;
+    }
+
+    .instrutores .instrutor:hover {
+        width: 95%;
+    }
+
+    .avaliacoes {
+        margin:  200px 10px 0;
+    }
+
+    .avaliacoes .avaliacao-down {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .planos {
+        margin: 200px 10px 0;
+    }
+
+    .planos .planos-container {
+        flex-direction: column;
+    }
+
+    footer .footer-container {
+        margin: 0 10px 0;
+        padding: 40px 10px;
+        gap: 40px;
+    }
+
+    footer .footer-local {
+        width: 100%;
+    }
+
+    footer .footer-direitos {
+        font-size: 12px;
+        text-align: center;
+    }
+}
